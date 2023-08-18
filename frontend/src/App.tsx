@@ -1,8 +1,13 @@
-import './App.css';
-// import styled from '@emotion/styled';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-  return <>123</>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/test" element={<>123</>}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
