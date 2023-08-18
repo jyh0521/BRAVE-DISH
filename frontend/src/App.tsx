@@ -21,6 +21,8 @@ function App() {
 export default App;
 
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
-  max-width: 380px;
+  min-width: 380px;
 `;
