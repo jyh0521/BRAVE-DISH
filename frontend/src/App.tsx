@@ -1,14 +1,8 @@
 import './App.css';
-import styled from '@emotion/styled';
+// import styled from '@emotion/styled';
 
 function App() {
-  return (
-    <>
-      <Test>test</Test>
-    </>
-  );
+  return <>123</>;
 }
 
 export default App;
-
-const Test = styled.div``;
