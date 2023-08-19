@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-const Reset = css`
+const reset = css`
   * {
     margin: 0;
     padding: 0;
@@ -15,4 +15,4 @@ const Reset = css`
   }
 `;
 
-export default Reset;
+export default reset;
