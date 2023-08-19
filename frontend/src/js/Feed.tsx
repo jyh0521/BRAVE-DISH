@@ -27,8 +27,8 @@ export const Feed = () => {
         </FeedAchievementContainer>
       </FeedContainer>
       <LikeContainer>
-        <LikeDiv>👍🏻 좋아요 12</LikeDiv>
-        <LikeDiv>💬 댓글 3</LikeDiv>
+        <LikeDiv>👍🏻 Like 12</LikeDiv>
+        <LikeDiv>💬 Comment 3</LikeDiv>
       </LikeContainer>
       <CommentContainer>
         <CommentHeader>
@@ -53,8 +53,8 @@ export const Feed = () => {
         </FeedChallengeContainer>
       </FeedContainer>
       <LikeContainer>
-        <LikeDiv>👍🏻 좋아요 12</LikeDiv>
-        <LikeDiv>💬 댓글 3</LikeDiv>
+        <LikeDiv>👍🏻 Like 15</LikeDiv>
+        <LikeDiv>💬 Comment 0</LikeDiv>
       </LikeContainer>
       <EmptyDiv />
     </MainContainer>
