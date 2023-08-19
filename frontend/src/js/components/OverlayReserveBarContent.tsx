@@ -1,10 +1,13 @@
 
 import styled from "@emotion/styled";
 import {useReserveStatusStore} from "../store/ReserveStatusStore.ts";
+import {useNavigate} from "react-router-dom";
 
 export const OverlayReserveBarContent = () => {
 
-    const {reserveStatus} = useReserveStatusStore();
+    const {reserveStatus, setReserveStatus} = useReserveStatusStore();
+
+    const navigate = useNavigate();
 
     return (
         <>
@@ -27,8 +30,26 @@ export const OverlayReserveBarContent = () => {
                         </OverlayReserveBarTextNormal>
                     </OverlayReserveBarText>
                     <OverlayReserveBarButtonWrapper>
-                        <OverlayReserveBarButton>
+                        <OverlayReserveBarButton onClick={() => setReserveStatus("CONFIRM")}>
                             {"수거\n예약하기"}
+                        </OverlayReserveBarButton>
+                    </OverlayReserveBarButtonWrapper>
+                </OverlayReserveBarSpaceBetweenContainer>
+            }
+
+            {
+                reserveStatus == "CONFIRM" && <OverlayReserveBarSpaceBetweenContainer>
+                    <OverlayReserveBarText>
+                        <OverlayReserveBarTextBold>
+                            첫 번째 장소 수거 진행 중
+                        </OverlayReserveBarTextBold>
+                        <OverlayReserveBarTextNormal>
+                            센텀2로 23 센텀드림월드 103호
+                        </OverlayReserveBarTextNormal>
+                    </OverlayReserveBarText>
+                    <OverlayReserveBarButtonWrapper>
+                        <OverlayReserveBarButton onClick={() => navigate("/camera")}>
+                            수거 완료
                         </OverlayReserveBarButton>
                     </OverlayReserveBarButtonWrapper>
                 </OverlayReserveBarSpaceBetweenContainer>
