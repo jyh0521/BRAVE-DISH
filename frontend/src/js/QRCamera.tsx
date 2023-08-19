@@ -17,7 +17,8 @@ export const QRCamera = () => {
         }
       }}
       // containerStyle={{ width: '100%', marginTop: '35px' }}
-      // videoStyle={{ width: '100%' }}
+      containerStyle={{ width: '100%' }}
+      videoStyle={{ width: '100%' }}
     />
   );
   // <>
