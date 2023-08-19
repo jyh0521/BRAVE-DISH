@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import {MapContainer} from "./js/components/MapContainer.tsx";
 import {GoogleMap} from "@react-google-maps/api";
+import {OverlayReserveBarContent} from "./js/components/OverlayReserveBarContent.tsx";
+import {useReserveStatusStore} from "./js/store/ReserveStatusStore.ts";
 
 
 const center = {
@@ -24,6 +26,14 @@ const mapOptions = {
 };
 
 export const MapMain = () => {
+
+    const {setReserveStatus} = useReserveStatusStore();
+
+    const onClickHandler = () => {
+        console.log("hey");
+        setReserveStatus("RESERVE");
+    }
+
     return(
         <MapWrapper>
             <MapContainer>
@@ -32,25 +42,19 @@ export const MapMain = () => {
                     mapContainerStyle={mapStyle}
                     options={mapOptions}
                     zoom={6}
-                    center={center}>
+                    center={center}
+                >
                 </GoogleMap>
             </MapContainer>
             <OverlayRecommendBar>
                 <OverlayRecommendBarText>
                     <div>👍🏻</div>
-                    <div>{"맞춤 경로 추천"}</div>
+                    <div onClick={onClickHandler}>{"맞춤 경로 추천"}</div>
                     <div style={{color:"#000000"}}>{"받기"}</div>
                 </OverlayRecommendBarText>
             </OverlayRecommendBar>
             <OverlayReserveBar>
-                <OverlayReserveBarText>
-                    현재 위치에서 320M, 5분 예상
-                </OverlayReserveBarText>
-                <OverlayReserveBarButtonWrapper>
-                    <OverlayReserveBarButton>
-                        {"수거\n예약하기"}
-                    </OverlayReserveBarButton>
-                </OverlayReserveBarButtonWrapper>
+                <OverlayReserveBarContent />
             </OverlayReserveBar>
         </MapWrapper>
     )
@@ -89,6 +93,7 @@ const OverlayRecommendBarText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   gap: 3px;
 `;
 
@@ -104,37 +109,4 @@ const OverlayReserveBar = styled.div`
   position: absolute;
 
   box-shadow:0px 12px 24px 0 rgba(0,0,0,0.16);
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const OverlayReserveBarText = styled.div`
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const OverlayReserveBarButtonWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
-  height: 100%;
-  padding-right: 10px;
-`;
-
-const OverlayReserveBarButton = styled.div`
-  width: 100%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #24A3FF;
-  border-radius: 10px;
-  color: #FAFAFA;
-  text-align: center;
-  white-space: pre-wrap;
 `;
