@@ -6,11 +6,8 @@ export const QRCamera = () => {
   const getUserCamera = () => {
     // @ts-ignore
     navigator.mediaDevices
-      // @ts-ignore
       .getUserMedia({
-        video: {
-          facingMode: { exact: 'environment' },
-        },
+        video: { facingMode: { exact: 'environment' } },
       })
       .then((stream) => {
         //비디오 tag에 stream 추가
@@ -33,7 +30,6 @@ export const QRCamera = () => {
   return (
     <div className="container">
       <video className="container" ref={videoRef}></video>
-      {/* <iframe src="https://naver.com" allow="camera;microphone"></iframe> */}
     </div>
   );
 };
