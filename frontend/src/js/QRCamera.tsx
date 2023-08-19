@@ -28,7 +28,7 @@ export const QRCamera = () => {
   }, [videoRef]);
 
   return (
-    <div className="container">
+    <div style={{ width: '100px', height: '100px' }}>
       <video className="container" ref={videoRef}></video>
     </div>
   );
