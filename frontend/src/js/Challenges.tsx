@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Challenges = () => {
   return (
     <Container>
-      <Header>챌린지</Header>
+      <Header>Challenge</Header>
       <FightTitleContainer>
         <FightTitle>🔥 진행 중인 대결</FightTitle>
         <FightPeriod>(08.19~08.26)</FightPeriod>
@@ -81,9 +81,9 @@ const Container = styled.div`
 `;
 
 const Header = styled.div`
-  color: #000;
+   color: #000;
   font-family: Pretendard;
-  font-size: 15px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
