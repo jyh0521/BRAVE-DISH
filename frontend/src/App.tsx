@@ -3,6 +3,7 @@ import { MainFooter } from './js/components/MainFooter';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 import emotionReset from 'emotion-reset';
+import {MapTest} from "./MapTest.tsx";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       />
       <Container>
         <Routes>
-          <Route path="/test" element={<>13</>}></Route>
+          <Route path="/test" element={<>123</>}></Route>
+          <Route path="/map_test" element={<MapTest/>}></Route>
         </Routes>
         <MainFooter />
       </Container>
