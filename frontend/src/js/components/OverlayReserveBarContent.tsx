@@ -4,7 +4,7 @@ import {useReserveStatusStore} from "../store/ReserveStatusStore.ts";
 
 export const OverlayReserveBarContent = () => {
 
-    const {reserveStatus,} = useReserveStatusStore();
+    const {reserveStatus} = useReserveStatusStore();
 
     return (
         <>
