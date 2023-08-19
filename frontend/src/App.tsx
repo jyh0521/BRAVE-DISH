@@ -4,6 +4,8 @@ import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 import emotionReset from 'emotion-reset';
 import {MapTest} from "./MapTest.tsx";
+import {MapDirectionTest} from "./MapDirectionTest.tsx";
+import {MapMain} from "./MapMain.tsx";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Routes>
           <Route path="/test" element={<>123</>}></Route>
           <Route path="/map_test" element={<MapTest/>}></Route>
+          <Route path="/map_direction_test" element={<MapDirectionTest/>}></Route>
+          <Route path="/map_main" element={<MapMain/>}></Route>
         </Routes>
         <MainFooter />
       </Container>
