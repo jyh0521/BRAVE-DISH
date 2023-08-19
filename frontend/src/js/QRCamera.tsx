@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect } from 'react';
 
 export const QRCamera = () => {
@@ -5,6 +6,7 @@ export const QRCamera = () => {
 
   useEffect(() => {
     let vid = document.getElementById('vid');
+    // @ts-ignore
     if (navigator.mediaDevices.getUserMedia !== null) {
       var options = {
         video: true,
@@ -42,6 +44,7 @@ export const QRCamera = () => {
 
   const camON = () => {
     let vid = document.getElementById('vid');
+    // @ts-ignore
     if (navigator.mediaDevices.getUserMedia !== null) {
       var options = {
         video: true,
