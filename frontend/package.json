@@ -13,6 +13,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@react-google-maps/api": "^2.19.2",
+    "@types/react-qr-reader": "^2.1.4",
     "emotion-reset": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
