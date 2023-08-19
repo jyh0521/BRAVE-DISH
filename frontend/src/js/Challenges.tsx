@@ -125,10 +125,7 @@ const ChallengeListTitle = styled.div`
   margin-bottom: 18px;
 `;
 
-const ChallengeListContainer = styled.div`
-  height: 500px;
-  overflow: scroll;
-`;
+const ChallengeListContainer = styled.div``;
 
 const ChallengeListItem = styled.div`
   border-radius: 10px;
