@@ -1,0 +1,47 @@
+import styled from "@emotion/styled";
+
+
+export const OverlayRecommendBarShort = () => {
+    return (
+        <>
+            <OverlayRecommendBarShorten>
+                <OverlayRecommendBarText>
+                    <div>👍🏻</div>
+                    <div>{"맞춤 경로 추천"}</div>
+                    <div style={{color:"#000000"}}>{"받기"}</div>
+                </OverlayRecommendBarText>
+            </OverlayRecommendBarShorten>
+        </>
+    )
+}
+
+const OverlayRecommendBarShorten = styled.div`
+  width: 52%; 
+  height: 41px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  
+  border-radius: 12px;
+  background: #FAFAFA;
+  position: absolute;
+
+  //box-shadow:
+  //  inset 0 0 0 12px white,
+  //  0 3px 12px black;
+
+  box-shadow:0px 12px 24px 0 rgba(0,0,0,0.16);
+`;
+
+const OverlayRecommendBarText = styled.div`
+  color: #24A3FF;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 3px;
+`;
