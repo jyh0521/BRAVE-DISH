@@ -37,7 +37,9 @@ export const MapMain = () => {
             </MapContainer>
             <OverlayRecommendBar>
                 <OverlayRecommendBarText>
-                    맞춤 경로 추천 받기
+                    <div>👍🏻</div>
+                    <div>{"맞춤 경로 추천"}</div>
+                    <div style={{color:"#000000"}}>{"받기"}</div>
                 </OverlayRecommendBarText>
             </OverlayRecommendBar>
             <OverlayReserveBar>
@@ -61,7 +63,7 @@ const MapWrapper = styled.div`
 `;
 
 const OverlayRecommendBar = styled.div`
-  width: 72%; 
+  width: 52%; 
   height: 41px;
   top: 10%;
   left: 50%;
@@ -87,6 +89,7 @@ const OverlayRecommendBarText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3px;
 `;
 
 const OverlayReserveBar = styled.div`
