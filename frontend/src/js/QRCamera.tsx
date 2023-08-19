@@ -7,7 +7,7 @@ export const QRCamera = () => {
     // @ts-ignore
     navigator.mediaDevices
       .getUserMedia({
-        video: { facingMode: { exact: 'environment' } },
+        video: { facingMode: 'environment' },
       })
       .then((stream) => {
         //비디오 tag에 stream 추가
