@@ -9,6 +9,7 @@ import { MapMain } from './MapMain.tsx';
 import { Challenges } from './js/Challenges.tsx';
 import { QRCamera } from './js/QRCamera.tsx';
 import { MissionCompleted } from './js/MissionCompleted.tsx';
+import { Feed } from './js/Feed.tsx';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           <Route path="/challenge" element={<Challenges />}></Route>
           <Route path="/camera" element={<QRCamera />}></Route>
           <Route path="/mission/completed" element={<MissionCompleted />}></Route>
-          <Route path="/feed" element={<>feed</>}></Route>
+          <Route path="/feed" element={<Feed />}></Route>
           <Route path="/rank" element={<>rank</>}></Route>
         </Routes>
         <MainFooter />
