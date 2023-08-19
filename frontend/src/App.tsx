@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { MainFooter } from './js/components/MainFooter';
+import { MainFooter } from './js/components/MainFooter.js';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 import emotionReset from 'emotion-reset';
-import {MapTest} from "./MapTest.tsx";
-import {MapDirectionTest} from "./MapDirectionTest.tsx";
-import {MapMain} from "./MapMain.tsx";
+import { MapTest } from './MapTest.tsx';
+import { MapDirectionTest } from './MapDirectionTest.tsx';
+import { MapMain } from './MapMain.tsx';
 import { Challenges } from './js/Challenges.tsx';
 import { ChallengeDetail } from './js/ChallengeDetail.tsx';
 import { QRCamera } from './js/QRCamera.tsx';
@@ -22,9 +22,9 @@ function App() {
       <Container>
         <Routes>
           <Route path="/test" element={<>123</>}></Route>
-          <Route path="/map_test" element={<MapTest/>}></Route>
-          <Route path="/map_direction_test" element={<MapDirectionTest/>}></Route>
-          <Route path="/map_main" element={<MapMain/>}></Route>
+          <Route path="/map_test" element={<MapTest />}></Route>
+          <Route path="/map_direction_test" element={<MapDirectionTest />}></Route>
+          <Route path="/map_main" element={<MapMain />}></Route>
           <Route path="/" element={<MapTest />}></Route>
           <Route path="/challenge" element={<Challenges />}></Route>
           <Route path="/challenge/detail" element={<ChallengeDetail />}></Route>
