@@ -29,6 +29,7 @@ export const QRCamera = () => {
             }
           }}
           containerStyle={{ marginTop: '35px' }}
+          videoContainerStyle={{ width: '100%' }}
         />
         <CameraTop>
           <img src={'/images/camera_top_1.png'} width={'20px'} />
