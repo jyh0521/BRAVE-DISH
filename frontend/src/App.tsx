@@ -11,6 +11,7 @@ function App() {
     <BrowserRouter>
       <Global
         styles={css`
+          @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css');
           ${emotionReset}
         `}
       />

@@ -79,6 +79,7 @@ const Container = styled.div`
 `;
 
 const ChallengeTitle = styled.div`
+  font-family: 'Pretendard';
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -92,6 +93,7 @@ const ChallengeContainer = styled.div`
 `;
 
 const ChallengeContainerTitle = styled.div`
+  font-family: 'Pretendard';
   color: #ff4768;
   font-size: 15px;
   font-weight: 600;
@@ -107,6 +109,7 @@ const ChallengeProgressBar = styled.div`
 `;
 
 const ChallengeProgressStep = styled.div`
+  font-family: 'Pretendard';
   color: #3f3f3f;
   font-size: 12px;
   font-weight: 500;
@@ -114,6 +117,7 @@ const ChallengeProgressStep = styled.div`
 `;
 
 const ChallengeListTitle = styled.div`
+  font-family: 'Pretendard';
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -136,6 +140,7 @@ const ChallengeListItem = styled.div`
 `;
 
 const ChallengeListItemTitle = styled.div`
+  font-family: 'Pretendard';
   color: #292929;
   font-size: 15px;
   font-weight: 700;
@@ -146,6 +151,7 @@ const ChallengeListItemTitle = styled.div`
 const ChallengeListItemInfo = styled.div``;
 
 const ChallengeListPoint = styled.div`
+  font-family: 'Pretendard';
   color: #292929;
   font-size: 15px;
   font-weight: 700;
@@ -153,6 +159,7 @@ const ChallengeListPoint = styled.div`
 `;
 
 const ChallengeListItemLimit = styled.div`
+  font-family: 'Pretendard';
   color: #292929;
   font-size: 12px;
   font-weight: 400;
