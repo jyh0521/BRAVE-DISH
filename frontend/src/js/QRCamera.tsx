@@ -5,8 +5,13 @@ export const QRCamera = () => {
 
   const getUserCamera = () => {
     // @ts-ignore
-    navigator.decodeFromInputVideoDevice() 
-      .then((stream: any) => {
+    navigator.mediaDevices
+      .getUserMedia({
+        video: {
+          facingMode: { exact: 'environment' },
+        },
+      })
+      .then((stream) => {
         //비디오 tag에 stream 추가
         let video = videoRef.current;
 
@@ -15,7 +20,7 @@ export const QRCamera = () => {
         // @ts-ignore
         video.play();
       })
-      .catch((error: any) => {
+      .catch((error) => {
         console.log(error);
       });
   };
