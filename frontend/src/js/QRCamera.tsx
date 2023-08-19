@@ -1,4 +1,4 @@
-// import styled from '@emotion/styled';
+import styled from '@emotion/styled';
 import { QrReader } from 'react-qr-reader';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,20 +6,22 @@ export const QRCamera = () => {
   const navigate = useNavigate();
 
   return (
-    <QrReader
-      constraints={{ facingMode: 'environment' }}
-      onResult={(result, error) => {
-        if (!!result) {
-          navigate('/mission/completed');
-        }
-        if (!!error) {
-          console.info(error);
-        }
-      }}
-      // containerStyle={{ width: '100%', marginTop: '35px' }}
-      containerStyle={{ width: '100%' }}
-      videoStyle={{ width: '100%' }}
-    />
+    <Body>
+      <QrReader
+        constraints={{ facingMode: 'environment' }}
+        onResult={(result, error) => {
+          if (!!result) {
+            navigate('/mission/completed');
+          }
+          if (!!error) {
+            console.info(error);
+          }
+        }}
+        // containerStyle={{ width: '100%', marginTop: '35px' }}
+        containerStyle={{ width: '100%' }}
+        videoStyle={{ width: '100%' }}
+      />
+    </Body>
   );
   // <>
   //   <Header>
@@ -87,9 +89,9 @@ export const QRCamera = () => {
 //   line-height: 20px;
 // `;
 
-// const Body = styled.div`
-//   width: 100%;
-// `;
+const Body = styled.div`
+  width: 100%;
+`;
 
 // const CameraTop = styled.div`
 //   padding: 10px;
