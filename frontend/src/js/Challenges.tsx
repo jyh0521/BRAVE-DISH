@@ -242,7 +242,7 @@ const SpecialMissionContainer = styled.div`
   font-weight: 600;
   line-height: 20px;
   padding: 0 6px;
-  width: 37px;
+  width: 38px;
   margin-bottom: 12px;
 `;
 
