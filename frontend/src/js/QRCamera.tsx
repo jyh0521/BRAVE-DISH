@@ -28,7 +28,7 @@ export const QRCamera = () => {
               console.info(error);
             }
           }}
-          containerStyle={{ width: '100%', marginTop: '35px', height: '380px' }}
+          containerStyle={{ marginTop: '35px' }}
         />
         <CameraTop>
           <img src={'/images/camera_top_1.png'} width={'20px'} />
@@ -98,7 +98,7 @@ const CameraBottom = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  bottom: 24%;
+  bottom: 25%;
 `;
 
 const Footer = styled.div`
