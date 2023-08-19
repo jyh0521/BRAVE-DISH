@@ -6,6 +6,7 @@ export const QRCamera = () => {
   const getUserCamera = () => {
     // @ts-ignore
     navigator.mediaDevices
+      // @ts-ignore
       .getUserMedia({
         video: {
           facingMode: { exact: 'environment' },
