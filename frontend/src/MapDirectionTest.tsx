@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import {MapContainer} from "./js/components/MapContainer.tsx";
-import {GoogleMap, DirectionsService, DirectionsRenderer} from "@react-google-maps/api";
+import {DirectionsRenderer, DirectionsService, GoogleMap} from "@react-google-maps/api";
 import {useRef, useState} from "react";
+import TravelMode = google.maps.TravelMode;
 
 type DirectionsProps = {
     origin: any;
@@ -29,9 +30,10 @@ const Directions = (props: DirectionsProps) => {
         }
     }
 
+    // @ts-ignore
     return (
         <>
-            <DirectionsService options={{origin, destination, travelMode: 'TRANSIT' }} callback={directionsCallback} />
+            <DirectionsService options={{origin, destination, travelMode: TravelMode.TRANSIT }} callback={directionsCallback} />
             <DirectionsRenderer directions={directions} options={options} />
         </>
     )
