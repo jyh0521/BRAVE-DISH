@@ -1,19 +1,25 @@
 import styled from '@emotion/styled';
+import { useNavigate } from 'react-router-dom';
 
 export const MainFooter = () => {
+  const navigate = useNavigate();
+  const onClickMenu = (url: string) => {
+    navigate(url);
+  };
+
   return (
     <Container>
-      <ImageContainer>
-        <img src={'/images/house_W_1.png'} />
+      <ImageContainer onClick={() => onClickMenu('/')}>
+        <img src={'/images/house_W_1.png'} style={{ width: '30px', height: '30px' }} />
       </ImageContainer>
-      <ImageContainer>
-        <img src={'/images/dungeon_W_1.png'} />
+      <ImageContainer onClick={() => onClickMenu('/challenge')}>
+        <img src={'/images/challenge_W_1.png'} style={{ width: '30px', height: '30px' }} />
       </ImageContainer>
-      <ImageContainer>
-        <img src={'/images/shopping-bag_W_1.png'} />
+      <ImageContainer onClick={() => onClickMenu('/feed')}>
+        <img src={'/images/feed_W_1.png'} style={{ width: '30px', height: '30px' }} />
       </ImageContainer>
-      <ImageContainer>
-        <img src={'/images/profile_W_1.png'} />
+      <ImageContainer onClick={() => onClickMenu('/rank')}>
+        <img src={'/images/rank_W_1.png'} style={{ width: '30px', height: '30px' }} />
       </ImageContainer>
     </Container>
   );
