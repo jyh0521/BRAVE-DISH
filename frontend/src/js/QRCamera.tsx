@@ -24,6 +24,6 @@ export const QRCamera = () => {
   );
 };
 
-const Header = styled.div``;
+// const Header = styled.div``;
 
 const CloseButton = styled.div``;
