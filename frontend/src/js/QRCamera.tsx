@@ -4,6 +4,7 @@ export const QRCamera = () => {
   let videoRef = useRef(null);
 
   const getUserCamera = () => {
+    // @ts-ignore
     navigator.mediaDevices
       .getUserMedia({
         video: true,
