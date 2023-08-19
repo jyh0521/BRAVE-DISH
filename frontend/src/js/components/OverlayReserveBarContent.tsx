@@ -19,7 +19,12 @@ export const OverlayReserveBarContent = () => {
             {
                 reserveStatus == "RESERVE" && <OverlayReserveBarSpaceBetweenContainer>
                     <OverlayReserveBarText>
-                        현재 위치에서 320M, 5분 예상
+                        <OverlayReserveBarTextBold>
+                            해운대구 센텀2로 25 센텀드림월드
+                        </OverlayReserveBarTextBold>
+                        <OverlayReserveBarTextNormal>
+                            현재 위치에서 200m, 5분 소요
+                        </OverlayReserveBarTextNormal>
                     </OverlayReserveBarText>
                     <OverlayReserveBarButtonWrapper>
                         <OverlayReserveBarButton>
@@ -37,6 +42,25 @@ const OverlayReserveBarText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: left;
+  flex-direction: column;
+  margin-left: 15px;
+`;
+
+const OverlayReserveBarTextBold = styled.div`
+  width: 100%;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #424242;
+`;
+
+const OverlayReserveBarTextNormal = styled.div`
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #424242;
 `;
 
 const OverlayReserveBarReadyText = styled.div`
@@ -76,6 +100,8 @@ const OverlayReserveBarButton = styled.div`
   align-items: center;
   background: #24A3FF;
   border-radius: 10px;
+  line-height: 1.4;
+  font-size: 14px;
   color: #FAFAFA;
   text-align: center;
   white-space: pre-wrap;
