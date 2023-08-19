@@ -1,13 +1,17 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MainFooter } from './js/components/MainFooter';
 import styled from '@emotion/styled';
-import { Global } from '@emotion/react';
-import reset from './reset';
+import { Global, css } from '@emotion/react';
+import emotionReset from 'emotion-reset';
 
 function App() {
   return (
     <BrowserRouter>
-      <Global styles={reset} />
+      <Global
+        styles={css`
+          ${emotionReset}
+        `}
+      />
       <Container>
         <Routes>
           <Route path="/test" element={<>13</>}></Route>
