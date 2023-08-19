@@ -10,7 +10,7 @@ function App() {
       <Global styles={reset} />
       <Container>
         <Routes>
-          <Route path="/test" element={<>123</>}></Route>
+          <Route path="/test" element={<>13</>}></Route>
         </Routes>
         <MainFooter />
       </Container>
