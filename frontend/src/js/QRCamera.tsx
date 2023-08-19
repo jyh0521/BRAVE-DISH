@@ -111,4 +111,6 @@ const Footer = styled.div`
   font-weight: 600;
   line-height: 30px;
   white-space: pre-line;
+  position: relative;
+  bottom: 20%;
 `;
