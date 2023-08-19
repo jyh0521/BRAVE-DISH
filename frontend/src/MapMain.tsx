@@ -92,7 +92,7 @@ const OverlayRecommendBarText = styled.div`
 const OverlayReserveBar = styled.div`
   width: 88%;
   height: 74px;
-  bottom: 3%;
+  bottom: 11%;
   left: 50%;
   transform: translate(-50%, 0%);
 
