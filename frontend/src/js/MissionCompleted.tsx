@@ -60,7 +60,7 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 40%;
 `;
 
 const Content = styled.div`
@@ -72,5 +72,5 @@ const Content = styled.div`
   font-weight: 600;
   line-height: 30px;
   white-space: pre-wrap;
-  margin-top: 100px;
+  margin-top: 35%;
 `;
