@@ -70,6 +70,7 @@ export const Challenges = () => {
           <GroupChallengeButton>챌린지 참여하기</GroupChallengeButton>
         </GroupChallenge>
       </GroupChallengeContainer>
+      <EmptyDiv />
     </Container>
   );
 };
@@ -299,4 +300,9 @@ const GroupChallengeButton = styled.div`
   font-weight: 700;
   line-height: 20px;
   padding: 8px;
+`;
+
+const EmptyDiv = styled.div`
+  width: 1px;
+  height: 100px;
 `;
