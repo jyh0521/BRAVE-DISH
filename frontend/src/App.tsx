@@ -3,16 +3,12 @@ import { MainFooter } from './js/components/MainFooter';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 import emotionReset from 'emotion-reset';
-<<<<<<< HEAD
 import {MapTest} from "./MapTest.tsx";
 import {MapDirectionTest} from "./MapDirectionTest.tsx";
 import {MapMain} from "./MapMain.tsx";
-=======
-import { MapTest } from './MapTest.tsx';
 import { Challenges } from './js/Challenges.tsx';
 import { ChallengeDetail } from './js/ChallengeDetail.tsx';
 import { QRCamera } from './js/QRCamera.tsx';
->>>>>>> 9aaa13fd67eadb5c8518835785cd616e8d36ca03
 
 function App() {
   return (
