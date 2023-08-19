@@ -6,6 +6,7 @@ import emotionReset from 'emotion-reset';
 import { MapTest } from './MapTest.tsx';
 import { Challenges } from './js/Challenges.tsx';
 import { ChallengeDetail } from './js/ChallengeDetail.tsx';
+import { QRCamera } from './js/QRCamera.tsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<MapTest />}></Route>
           <Route path="/challenge" element={<Challenges />}></Route>
           <Route path="/challenge/detail" element={<ChallengeDetail />}></Route>
+          <Route path="/camera" element={<QRCamera />}></Route>
           <Route path="/feed" element={<>feed</>}></Route>
           <Route path="/rank" element={<>rank</>}></Route>
         </Routes>
