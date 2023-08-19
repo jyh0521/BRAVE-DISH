@@ -23,10 +23,10 @@ export const OverlayReserveBarContent = () => {
                 reserveStatus == "RESERVE" && <OverlayReserveBarSpaceBetweenContainer>
                     <OverlayReserveBarText>
                         <OverlayReserveBarTextBold>
-                            해운대구 센텀2로 25 센텀드림월드
+                            Haeundae-gu, Centum 2-ro, 25
                         </OverlayReserveBarTextBold>
                         <OverlayReserveBarTextNormal>
-                            현재 위치에서 200m, 5분 소요
+                             200m, 5분 소요
                         </OverlayReserveBarTextNormal>
                     </OverlayReserveBarText>
                     <OverlayReserveBarButtonWrapper>
@@ -41,15 +41,15 @@ export const OverlayReserveBarContent = () => {
                 reserveStatus == "CONFIRM" && <OverlayReserveBarSpaceBetweenContainer>
                     <OverlayReserveBarText>
                         <OverlayReserveBarTextBold>
-                            첫 번째 장소 수거 진행 중
+                            First lift is in progress
                         </OverlayReserveBarTextBold>
                         <OverlayReserveBarTextNormal>
-                            센텀2로 23 센텀드림월드 103호
+                            Haeundae-gu, Centum 2-ro, 23, 103ho
                         </OverlayReserveBarTextNormal>
                     </OverlayReserveBarText>
                     <OverlayReserveBarButtonWrapper>
                         <OverlayReserveBarButton onClick={() => navigate("/camera")}>
-                            수거 완료
+                            Lift Complete
                         </OverlayReserveBarButton>
                     </OverlayReserveBarButtonWrapper>
                 </OverlayReserveBarSpaceBetweenContainer>

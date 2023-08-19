@@ -24,8 +24,7 @@ function App() {
         <Routes>
           <Route path="/map_test" element={<MapTest />}></Route>
           <Route path="/map_direction_test" element={<MapDirectionTest />}></Route>
-          <Route path="/map_main" element={<MapMain />}></Route>
-          <Route path="/" element={<MapTest />}></Route>
+          <Route path="/" element={<MapMain />}></Route>
           <Route path="/challenge" element={<Challenges />}></Route>
           <Route path="/camera" element={<QRCamera />}></Route>
           <Route path="/mission/completed" element={<MissionCompleted />}></Route>
