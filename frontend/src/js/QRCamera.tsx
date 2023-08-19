@@ -28,7 +28,7 @@ export const QRCamera = () => {
               console.info(error);
             }
           }}
-          containerStyle={{ marginTop: '35px' }}
+          containerStyle={{ width: '100%', marginTop: '35px' }}
           videoStyle={{ width: '100%' }}
         />
         <CameraTop>
