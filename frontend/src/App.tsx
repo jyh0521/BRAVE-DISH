@@ -8,8 +8,12 @@ import { MapDirectionTest } from './MapDirectionTest.tsx';
 import { MapMain } from './MapMain.tsx';
 import { Challenges } from './js/Challenges.tsx';
 import { QRCamera } from './js/QRCamera.tsx';
+
+import {MyInfo} from './js/MyInfo.tsx';
+
 import { MissionCompleted } from './js/MissionCompleted.tsx';
 import { Feed } from './js/Feed.tsx';
+
 
 function App() {
   return (
@@ -30,6 +34,7 @@ function App() {
           <Route path="/mission/completed" element={<MissionCompleted />}></Route>
           <Route path="/feed" element={<Feed />}></Route>
           <Route path="/rank" element={<>rank</>}></Route>
+          <Route path="/my_info" element={<MyInfo/>}></Route>
         </Routes>
         <MainFooter />
       </Container>
