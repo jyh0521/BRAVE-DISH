@@ -14,8 +14,10 @@ export const OverlayReserveBarContent = () => {
             {
                 reserveStatus == "READY" && <>
                     <OverlayReserveBarReadyText>
-                        {"수거를 위해 방문할 장소를 선택해주세요\n" +
-                            "선택한 장소로 경로를 만들어 드릴게요"}
+                        {/*{"수거를 위해 방문할 장소를 선택해주세요\n" +*/}
+                        {/*    "선택한 장소로 경로를 만들어 드릴게요"}*/}
+                        {"For lift, choose a waypoint\n" +
+                            "we will make a route for you"}
                     </OverlayReserveBarReadyText>
                 </>
             }
@@ -26,7 +28,7 @@ export const OverlayReserveBarContent = () => {
                             Haeundae-gu, Centum 2-ro, 25
                         </OverlayReserveBarTextBold>
                         <OverlayReserveBarTextNormal>
-                             200m, 5분 소요
+                             200m from here, 5 min
                         </OverlayReserveBarTextNormal>
                     </OverlayReserveBarText>
                     <OverlayReserveBarButtonWrapper>
@@ -92,7 +94,7 @@ const OverlayReserveBarReadyText = styled.div`
   align-items: center;
   text-align: center;
   white-space: pre-wrap;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 1.4;
 `;

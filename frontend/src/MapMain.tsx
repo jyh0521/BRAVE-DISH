@@ -22,7 +22,7 @@ const mapStyle = {
 };
 
 const mapOptions = {
-    minZoom: 13,
+    minZoom: 15,
     maxZoom: 19,
     mapId: '56341e6217e09f25',
     fullscreenControl: false,

@@ -8,8 +8,8 @@ export const OverlayRecommendBarShort = () => {
                 <OverlayRecommendBarText>
                     <div>👍🏻</div>
                     {/*<div>{"맞춤 경로 추천"}</div>*/}
-                    <div>{"For recommended route"}</div>
-                    <div style={{color:"#000000"}}>{"click here"}</div>
+                    <div>{"For auto route"}</div>
+                    <div style={{color:"#000000"}}>{"click here!"}</div>
                 </OverlayRecommendBarText>
             </OverlayRecommendBarShorten>
         </>
@@ -17,7 +17,7 @@ export const OverlayRecommendBarShort = () => {
 }
 
 const OverlayRecommendBarShorten = styled.div`
-  width: 52%; 
+  width: 73%; 
   height: 41px;
   top: 10%;
   left: 50%;
