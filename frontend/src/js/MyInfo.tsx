@@ -4,7 +4,7 @@ export const MyInfo = () => {
   return (
     <MainContainer>
       <Container>
-        <MyInfoTitle>Profile</MyInfoTitle>
+        <Header>Profile</Header>
         <MyInfoMain>
           <ProfileImage />
           <NickNameContainer>
@@ -201,4 +201,18 @@ const MyChallengeResult = styled.div`
 const EmptyDiv = styled.div`
   width: 1px;
   height: 180px;
+`;
+
+const Header = styled.div`
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 24px;
 `;
