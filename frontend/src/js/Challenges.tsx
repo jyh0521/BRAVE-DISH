@@ -5,69 +5,69 @@ export const Challenges = () => {
     <Container>
       <Header>Challenge</Header>
       <FightTitleContainer>
-        <FightTitle>🔥 진행 중인 대결</FightTitle>
+        <FightTitle>🔥 Ongoing Matchup</FightTitle>
         <FightPeriod>(08.19~08.26)</FightPeriod>
       </FightTitleContainer>
       <FightInfoContainer>
         <FightRegionContainer>
-          <FightRegion>⚔️ 망원동 VS 성수동</FightRegion>
-          <FightStatus>진행중</FightStatus>
+          <FightRegion>⚔️ Mangwon-dong VS Seongdong-gu</FightRegion>
+          <FightStatus>Onging</FightStatus>
         </FightRegionContainer>
         <FightDayInfoContainer>
-          <DayContainer>월</DayContainer>
+          <DayContainer>Mon</DayContainer>
           <GraphContainer>
             <GraphBlackBar style={{ width: '86px' }} />
             <GraphBlueBar style={{ width: '65px' }} />
           </GraphContainer>
-          <ResultContainer>🥹 패배</ResultContainer>
+          <ResultContainer>🥹 lose</ResultContainer>
         </FightDayInfoContainer>
         <FightDayInfoContainer>
-          <DayContainer>화</DayContainer>
+          <DayContainer>Tue</DayContainer>
           <GraphContainer>
             <GraphBlackBar style={{ width: '72px' }} />
             <GraphBlueBar style={{ width: '79px' }} />
           </GraphContainer>
-          <ResultContainer>👍🏻 승리</ResultContainer>
+          <ResultContainer>👍🏻 win</ResultContainer>
         </FightDayInfoContainer>
         <FightDayInfoContainer>
-          <DayContainer>수</DayContainer>
+          <DayContainer>Wed</DayContainer>
           <GraphContainer>
             <GraphBlackBar style={{ width: '81px' }} />
             <GraphBlueBar style={{ width: '81px' }} />
           </GraphContainer>
-          <ResultContainer>무승부</ResultContainer>
+          <ResultContainer>draw</ResultContainer>
         </FightDayInfoContainer>
         <FightDayInfoContainer>
-          <DayContainer>목</DayContainer>
+          <DayContainer>Thu</DayContainer>
           <GraphContainer>
             <GraphGreyBar style={{ width: '86px' }} />
             <GraphGreyBar style={{ width: '86px' }} />
           </GraphContainer>
-          <ResultContainer>예정</ResultContainer>
+          <ResultContainer>TBD</ResultContainer>
         </FightDayInfoContainer>
         <FightDayInfoContainer>
-          <DayContainer>금</DayContainer>
+          <DayContainer>Fri</DayContainer>
           <GraphContainer>
             <GraphGreyBar style={{ width: '86px' }} />
             <GraphGreyBar style={{ width: '86px' }} />
           </GraphContainer>
-          <ResultContainer>예정</ResultContainer>
+          <ResultContainer>TBD</ResultContainer>
         </FightDayInfoContainer>
       </FightInfoContainer>
-      <GroupChallengeTitleContainer>👫 그룹 챌린지</GroupChallengeTitleContainer>
+      <GroupChallengeTitleContainer>👫 Group Challenge</GroupChallengeTitleContainer>
       <GroupChallengeContainer>
         <GroupChallenge>
-          <SpecialMissionContainer>특별 미션</SpecialMissionContainer>
+          <SpecialMissionContainer>Special Mission</SpecialMissionContainer>
           <GroupChallengeInfoTitleContainer>
-            <GroupChallengeInfoTitle>{`우리 동네\n일일 수거 100건 달성`}</GroupChallengeInfoTitle>
+            <GroupChallengeInfoTitle>{`In Our Neighborhood \nAchieved 100 Daily Collections`}</GroupChallengeInfoTitle>
             <GroupChallengeInfoPoint>500P</GroupChallengeInfoPoint>
           </GroupChallengeInfoTitleContainer>
           <progress value="70" max="100" style={{ width: '100%', marginBottom: '12px' }} />
           <GroupChallengeInfoContainer>
-            <GroupChallengeInfoText>🏃🏻‍♀️ 82건 완료</GroupChallengeInfoText>
-            <GroupChallengeInfoText>남은 시간 05:10:12</GroupChallengeInfoText>
+            <GroupChallengeInfoText>🏃🏻‍♀️ Completed 82 cases</GroupChallengeInfoText>
+            <GroupChallengeInfoText>Remaining time 05:10:12</GroupChallengeInfoText>
           </GroupChallengeInfoContainer>
-          <GroupChallengeButton>챌린지 참여하기</GroupChallengeButton>
+          <GroupChallengeButton>Participating in the challenge</GroupChallengeButton>
         </GroupChallenge>
       </GroupChallengeContainer>
       <EmptyDiv />
@@ -243,7 +243,7 @@ const SpecialMissionContainer = styled.div`
   font-weight: 600;
   line-height: 20px;
   padding: 0 6px;
-  width: 38px;
+  width: 72px;
   margin-bottom: 12px;
 `;
 
