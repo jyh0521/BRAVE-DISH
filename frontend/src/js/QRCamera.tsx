@@ -15,7 +15,7 @@ export const QRCamera = () => {
         >
           <img src={'/images/x_vector.png'} width={'20px'} />
         </CloseButton>
-        <HeaderTitle>수거 코드 스캔</HeaderTitle>
+        <HeaderTitle>QR code scanning</HeaderTitle>
       </Header>
       <Body>
         <QrReader
@@ -33,7 +33,7 @@ export const QRCamera = () => {
         <CameraCenter>
           <img src={'/images/camera_center.png'} width={'30px'} />
         </CameraCenter>
-        <Footer>{`수거한 용기 뒷쪽의 큐알코드를\n스캔해주세요`}</Footer>
+        <Footer>{`Scan the QR code on the back of the collected dish`}</Footer>
       </Body>
     </>
   );
@@ -49,7 +49,7 @@ const Header = styled.div`
 `;
 
 const CloseButton = styled.div`
-  margin-right: 110px;
+  margin-right: 64px;
 `;
 
 const HeaderTitle = styled.div`

@@ -14,66 +14,66 @@ export const MyInfo = () => {
         </MyInfoMain>
         <MoreInfo>
           <MoreInfoContainer>
-            <MoreInfoTitle>수거한 용기</MoreInfoTitle>
-            <MoreInfoValue>23개</MoreInfoValue>
+            <MoreInfoTitle>Collected dishes</MoreInfoTitle>
+            <MoreInfoValue>23</MoreInfoValue>
           </MoreInfoContainer>
           <MoreInfoContainer>
-            <MoreInfoTitle>누적 걸음 수</MoreInfoTitle>
-            <MoreInfoValue>10,230보</MoreInfoValue>
+            <MoreInfoTitle>Total steps</MoreInfoTitle>
+            <MoreInfoValue>10,230</MoreInfoValue>
           </MoreInfoContainer>
           <MoreInfoContainer>
-            <MoreInfoTitle>보유 포인트</MoreInfoTitle>
+            <MoreInfoTitle>My point</MoreInfoTitle>
             <MoreInfoValue>23,000P</MoreInfoValue>
           </MoreInfoContainer>
         </MoreInfo>
       </Container>
       <Divider />
       <Container>
-        <MyInfoTitle>달성한 챌린지</MyInfoTitle>
+        <MyInfoTitle>Challenge participated</MyInfoTitle>
         <MyChallengeContainer>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>Daily Challenge in my town</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>Collected 3 dishes a day</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>6,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>7,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>8,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>9,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>10,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>11,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>12,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>13,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
           <MyChallenge>
-            <MyChallengeTitle>우리 동네 일일 수거 챌린지</MyChallengeTitle>
-            <MyChallengeResult>🏆 달성</MyChallengeResult>
+            <MyChallengeTitle>14,000 steps challenge</MyChallengeTitle>
+            <MyChallengeResult>🏆 Clear</MyChallengeResult>
           </MyChallenge>
         </MyChallengeContainer>
       </Container>

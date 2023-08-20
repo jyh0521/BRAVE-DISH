@@ -47,8 +47,8 @@ export const Feed = () => {
         </FeedHeader>
         <FeedChallengeContainer>
           <FeedChallengeContainer>
-            <FeedChallengeTitle>“우리 동네 일일 수거 챌린지”에 참여했습니다</FeedChallengeTitle>
-            <FeedChallengeButton>함께 참여하기</FeedChallengeButton>
+            <FeedChallengeTitle>Participated in the "Daily Collection Challenge in my town"</FeedChallengeTitle>
+            <FeedChallengeButton>Join</FeedChallengeButton>
           </FeedChallengeContainer>
         </FeedChallengeContainer>
       </FeedContainer>
