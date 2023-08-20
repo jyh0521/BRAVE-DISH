@@ -33,7 +33,7 @@ export const OverlayReserveBarContent = () => {
                     </OverlayReserveBarText>
                     <OverlayReserveBarButtonWrapper>
                         <OverlayReserveBarButton onClick={() => setReserveStatus("CONFIRM")}>
-                            {"수거\n예약하기"}
+                            {"Left\nReserve"}
                         </OverlayReserveBarButton>
                     </OverlayReserveBarButtonWrapper>
                 </OverlayReserveBarSpaceBetweenContainer>
