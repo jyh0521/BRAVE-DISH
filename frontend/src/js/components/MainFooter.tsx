@@ -18,8 +18,8 @@ export const MainFooter = () => {
       <ImageContainer onClick={() => onClickMenu('/feed')}>
         <img src={'https://i.ibb.co/16BpRDX/Group-118.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
-      <ImageContainer onClick={() => onClickMenu('/rank')}>
-        <img src={'https://i.ibb.co/w0C9Drv/Group-119.png'} style={{ width: '30px', height: '42px' }} />
+      <ImageContainer onClick={() => onClickMenu('/my_info')}>
+        <img src={'https://i.ibb.co/cLWKw5p/Group-91.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
     </Container>
   );
