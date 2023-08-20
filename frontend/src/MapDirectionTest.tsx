@@ -100,6 +100,16 @@ export const MapDirectionTest = () => {
             </OverlayReserveBarSpaceBetweenContainer>
           )}
         </OverlayReserveBar>
+        <TopMenu>
+          <TopMenuContainer>
+            <TopMenuTitle>Departure</TopMenuTitle>
+            <TopMenuInput>55, APEC-ro, Haeundae-gu</TopMenuInput>
+          </TopMenuContainer>
+          <TopMenuContainer>
+            <TopMenuTitle style={{ marginRight: '37px' }}>Arrival</TopMenuTitle>
+            <TopMenuInput>769, Suyeong-ro, Suyeong-gu</TopMenuInput>
+          </TopMenuContainer>
+        </TopMenu>
       </MapWrapper>
     </>
   );
@@ -153,19 +163,6 @@ const OverlayReserveBarTextNormal = styled.div`
   color: #424242;
 `;
 
-const OverlayReserveBarReadyText = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  white-space: pre-wrap;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 1.4;
-`;
-
 const OverlayReserveBarSpaceBetweenContainer = styled.div`
   height: 100%;
   display: flex;
@@ -195,4 +192,56 @@ const OverlayReserveBarButton = styled.div`
   color: #fafafa;
   text-align: center;
   white-space: pre-wrap;
+`;
+
+const TopMenu = styled.div`
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  background: #fafafa;
+  position: absolute;
+
+  box-shadow: 0px 12px 24px 0 rgba(0, 0, 0, 0.16);
+  background-color: #428eff;
+
+  padding: 18px;
+  padding-left: 70px;
+`;
+
+const TopMenuContainer = styled.div`
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  column-count: 2;
+`;
+
+const TopMenuTitle = styled.div`
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+
+  margin-right: 12px;
+`;
+
+const TopMenuInput = styled.div`
+  width: 64%;
+  height: 34px;
+  border-radius: 9px;
+  background: #f1f1f1;
+
+  display: flex;
+  align-items: center;
+
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  
+  padding-left: 12px;
 `;
