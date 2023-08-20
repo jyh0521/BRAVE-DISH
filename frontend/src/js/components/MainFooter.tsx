@@ -10,16 +10,16 @@ export const MainFooter = () => {
   return (
     <Container>
       <ImageContainer onClick={() => onClickMenu('/')}>
-        <img src={'https://i.ibb.co/xs3Th15/Group-88.png'} style={{ width: '30px', height: '42px' }} />
+        <img src={'https://i.ibb.co/LxYwQ7L/Group-116.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
       <ImageContainer onClick={() => onClickMenu('/challenge')}>
-        <img src={'https://i.ibb.co/C9TH7gy/Group-89.png'} style={{ width: '30px', height: '42px' }} />
+        <img src={'https://i.ibb.co/jr0qM6t/Group-117.png'} style={{ width: '50px', height: '42px' }} />
       </ImageContainer>
       <ImageContainer onClick={() => onClickMenu('/feed')}>
-        <img src={'https://i.ibb.co/rQPFq92/Group-90.png'} style={{ width: '30px', height: '42px' }} />
+        <img src={'https://i.ibb.co/16BpRDX/Group-118.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
       <ImageContainer onClick={() => onClickMenu('/rank')}>
-        <img src={'https://i.ibb.co/cLWKw5p/Group-91.png'} style={{ width: '30px', height: '42px' }} />
+        <img src={'https://i.ibb.co/w0C9Drv/Group-119.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
     </Container>
   );
