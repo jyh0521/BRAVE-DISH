@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import {MapContainer} from "./js/components/MapContainer.tsx";
-import {GoogleMap, Marker} from "@react-google-maps/api";
+import {GoogleMap, Marker, Polyline} from "@react-google-maps/api";
 import {OverlayReserveBarContent} from "./js/components/OverlayReserveBarContent.tsx";
 import {useReserveStatusStore} from "./js/store/ReserveStatusStore.ts";
 import {useEffect, useState} from "react";
@@ -22,7 +22,7 @@ const mapStyle = {
 };
 
 const mapOptions = {
-    minZoom: 13,
+    minZoom: 15,
     maxZoom: 19,
     mapId: '56341e6217e09f25',
     fullscreenControl: false,
@@ -31,13 +31,19 @@ const mapOptions = {
     zoomControl: false,
 };
 
+const markerOneCoordinates = {lat: 35.166945, lng: 129.1329868}
+const markerTwoCoordinates = {lat: 35.1700826, lng:129.1328941}
+const markerThreeCoordinates = {lat: 35.1639317, lng: 129.1324239}
+const markerFourCoordinates = {lat: 35.1694593, lng: 129.1385963}
+
 export const MapMain = () => {
     const [markerClickedOne, setMarkerClickedOne] = useState(false);
     const [markerClickedTwo, setMarkerClickedTwo] = useState(false);
     const [markerClickedThree, setMarkerClickedThree] = useState(false);
     const [markerClickedFour, setMarkerClickedFour] = useState(false);
+    const [coordinateMarkers, setCoordinateMarkers] = useState<{lat:number, lng: number}[]>([]);
 
-    const {setReserveStatus, setReserveCount, reserveCount} = useReserveStatusStore();
+    const {setReserveStatus, reserveStatus, setReserveCount, reserveCount} = useReserveStatusStore();
 
     useEffect( () => {
         if(markerClickedOne || markerClickedTwo || markerClickedThree || markerClickedFour){
@@ -52,18 +58,22 @@ export const MapMain = () => {
 
     const onMarkerOneClickHandle = () => {
         setMarkerClickedOne(!markerClickedOne);
+        setCoordinateMarkers([...coordinateMarkers, markerOneCoordinates]);
     }
 
     const onMarkerTwoClickHandle = () => {
         setMarkerClickedTwo(!markerClickedTwo);
+        setCoordinateMarkers([...coordinateMarkers, markerTwoCoordinates]);
     }
 
     const onMarkerThreeClickHandle = () => {
         setMarkerClickedThree(!markerClickedThree);
+        setCoordinateMarkers([...coordinateMarkers, markerThreeCoordinates]);
     }
 
     const onMarkerFourClickHandle = () => {
         setMarkerClickedFour(!markerClickedFour);
+        setCoordinateMarkers([...coordinateMarkers, markerFourCoordinates]);
     }
 
     return(
@@ -76,47 +86,80 @@ export const MapMain = () => {
                     zoom={6}
                     center={center}
                 >
-                    {/*해운대 센텀 월드*/}
                     {
-                        <Marker position={{lat: 35.166945, lng: 129.1329868}}
-                                     icon={{
-                                         url: markerClickedOne ? redPinUrl : pinUrl
-                                     }}
-                                     cursor={'pointer'}
-                                     onClick={onMarkerOneClickHandle}
+                        ["READY","RESERVE"].includes(reserveStatus) ? <>
+                            <Marker position={markerOneCoordinates}
+                                    icon={{
+                                        url: markerClickedOne ? redPinUrl : pinUrl
+                                    }}
+                                    cursor={'pointer'}
+                                    onClick={onMarkerOneClickHandle}
+                            />
+
+
+                            {/*센텀시티 알라딘 중고서점*/}
+                            <Marker position={markerTwoCoordinates}
+                                    icon={{
+                                        url: markerClickedTwo ? redPinUrl : pinUrl
+                                    }}
+                                    cursor={'pointer'}
+                                    onClick={onMarkerTwoClickHandle}
+                            />
+
+                            {/*커피 프론트*/}
+                            <Marker position={markerThreeCoordinates}
+                                    icon={{
+                                        url: markerClickedThree ? redPinUrl : pinUrl
+                                    }}
+                                    cursor={'pointer'}
+                                    onClick={onMarkerThreeClickHandle}
+                            />
+
+                            {/*교촌 치킨 우동점*/}
+                            <Marker position={markerFourCoordinates}
+                                    icon={{
+                                        url: markerClickedFour ? redPinUrl : pinUrl
+                                    }}
+                                    cursor={'pointer'}
+                                    onClick={onMarkerFourClickHandle}
+                            />
+                        </> : <>
+                            {
+                                coordinateMarkers.map((coordinate, index) => {
+                                    let url;
+                                    if(index == 0) {
+                                        url = "https://i.ibb.co/JdtSy1y/Group-110-1.png";
+                                    } else if(index < coordinateMarkers.length - 1) {
+                                        url = "https://i.ibb.co/hm846RK/Group-118.png"
+                                    } else {
+                                        url = "https://i.ibb.co/hyr4Bxj/Group-115-1.png"
+                                    }
+                                    return <Marker position={coordinate} icon={{
+                                        url: url,
+                                        scaledSize: new window.google.maps.Size(35, 35)
+                                    }} ></Marker>
+                                })
+                            }
+                        </>
+                    }
+                    {/*해운대 센텀 월드*/}
+
+                    {
+                        reserveStatus == "CONFIRM" && <Polyline
+                            path={coordinateMarkers}
+                            options={{
+                                strokeColor: "#24A3FF",
+                                strokeWeight: 6,
+                                strokeOpacity: 1
+                            }}
                         />
                     }
-
-                    {/*센텀시티 알라딘 중고서점*/}
-                    <Marker position={{lat: 35.1700826, lng:129.1328941}}
-                            icon={{
-                                url: markerClickedTwo ? redPinUrl : pinUrl
-                            }}
-                            cursor={'pointer'}
-                            onClick={onMarkerTwoClickHandle}
-                    />
-
-                    {/*커피 프론트*/}
-                    <Marker position={{lat: 35.1659317, lng: 129.1324239}}
-                            icon={{
-                                url: markerClickedThree ? redPinUrl : pinUrl
-                            }}
-                            cursor={'pointer'}
-                            onClick={onMarkerThreeClickHandle}
-                    />
-
-                    {/*교촌 치킨 우동점*/}
-                    <Marker position={{lat: 35.1694593, lng: 129.1385963}}
-                            icon={{
-                                url: markerClickedFour ? redPinUrl : pinUrl
-                            }}
-                            cursor={'pointer'}
-                            onClick={onMarkerFourClickHandle}
-                    />
                 </GoogleMap>
             </MapContainer>
             {
-                reserveCount >= 2 ? <OverlayRecommendBarBig /> : <OverlayRecommendBarShort />
+                reserveStatus != "CONFIRM" && (
+                    reserveCount >= 2 ? <OverlayRecommendBarBig/> : <OverlayRecommendBarShort/>
+                )
             }
             <OverlayReserveBar>
                 <OverlayReserveBarContent />

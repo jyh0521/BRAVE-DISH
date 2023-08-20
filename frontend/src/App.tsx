@@ -7,9 +7,13 @@ import { MapTest } from './MapTest.tsx';
 import { MapDirectionTest } from './MapDirectionTest.tsx';
 import { MapMain } from './MapMain.tsx';
 import { Challenges } from './js/Challenges.tsx';
-import { ChallengeDetail } from './js/ChallengeDetail.tsx';
 import { QRCamera } from './js/QRCamera.tsx';
+
 import {MyInfo} from './js/MyInfo.tsx';
+
+import { MissionCompleted } from './js/MissionCompleted.tsx';
+import { Feed } from './js/Feed.tsx';
+
 
 function App() {
   return (
@@ -22,15 +26,13 @@ function App() {
       />
       <Container>
         <Routes>
-          <Route path="/test" element={<>123</>}></Route>
           <Route path="/map_test" element={<MapTest />}></Route>
           <Route path="/map_direction_test" element={<MapDirectionTest />}></Route>
-          <Route path="/map_main" element={<MapMain />}></Route>
-          <Route path="/" element={<MapTest />}></Route>
+          <Route path="/" element={<MapMain />}></Route>
           <Route path="/challenge" element={<Challenges />}></Route>
-          <Route path="/challenge/detail" element={<ChallengeDetail />}></Route>
           <Route path="/camera" element={<QRCamera />}></Route>
-          <Route path="/feed" element={<>feed</>}></Route>
+          <Route path="/mission/completed" element={<MissionCompleted />}></Route>
+          <Route path="/feed" element={<Feed />}></Route>
           <Route path="/rank" element={<>rank</>}></Route>
           <Route path="/my_info" element={<MyInfo/>}></Route>
         </Routes>

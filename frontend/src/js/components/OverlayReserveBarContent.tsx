@@ -1,18 +1,23 @@
 
 import styled from "@emotion/styled";
 import {useReserveStatusStore} from "../store/ReserveStatusStore.ts";
+import {useNavigate} from "react-router-dom";
 
 export const OverlayReserveBarContent = () => {
 
-    const {reserveStatus} = useReserveStatusStore();
+    const {reserveStatus, setReserveStatus} = useReserveStatusStore();
+
+    const navigate = useNavigate();
 
     return (
         <>
             {
                 reserveStatus == "READY" && <>
                     <OverlayReserveBarReadyText>
-                        {"수거를 위해 방문할 장소를 선택해주세요\n" +
-                            "선택한 장소로 경로를 만들어 드릴게요"}
+                        {/*{"수거를 위해 방문할 장소를 선택해주세요\n" +*/}
+                        {/*    "선택한 장소로 경로를 만들어 드릴게요"}*/}
+                        {"For lift, choose a waypoint\n" +
+                            "we will make a route for you"}
                     </OverlayReserveBarReadyText>
                 </>
             }
@@ -20,15 +25,33 @@ export const OverlayReserveBarContent = () => {
                 reserveStatus == "RESERVE" && <OverlayReserveBarSpaceBetweenContainer>
                     <OverlayReserveBarText>
                         <OverlayReserveBarTextBold>
-                            해운대구 센텀2로 25 센텀드림월드
+                            Haeundae-gu, Centum 2-ro, 25
                         </OverlayReserveBarTextBold>
                         <OverlayReserveBarTextNormal>
-                            현재 위치에서 200m, 5분 소요
+                             200m from here, 5 min
                         </OverlayReserveBarTextNormal>
                     </OverlayReserveBarText>
                     <OverlayReserveBarButtonWrapper>
-                        <OverlayReserveBarButton>
+                        <OverlayReserveBarButton onClick={() => setReserveStatus("CONFIRM")}>
                             {"수거\n예약하기"}
+                        </OverlayReserveBarButton>
+                    </OverlayReserveBarButtonWrapper>
+                </OverlayReserveBarSpaceBetweenContainer>
+            }
+
+            {
+                reserveStatus == "CONFIRM" && <OverlayReserveBarSpaceBetweenContainer>
+                    <OverlayReserveBarText>
+                        <OverlayReserveBarTextBold>
+                            First lift is in progress
+                        </OverlayReserveBarTextBold>
+                        <OverlayReserveBarTextNormal>
+                            Haeundae-gu, Centum 2-ro, 23, 103ho
+                        </OverlayReserveBarTextNormal>
+                    </OverlayReserveBarText>
+                    <OverlayReserveBarButtonWrapper>
+                        <OverlayReserveBarButton onClick={() => navigate("/camera")}>
+                            Lift Complete
                         </OverlayReserveBarButton>
                     </OverlayReserveBarButtonWrapper>
                 </OverlayReserveBarSpaceBetweenContainer>
@@ -71,7 +94,7 @@ const OverlayReserveBarReadyText = styled.div`
   align-items: center;
   text-align: center;
   white-space: pre-wrap;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 1.4;
 `;

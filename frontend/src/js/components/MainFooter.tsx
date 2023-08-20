@@ -10,16 +10,16 @@ export const MainFooter = () => {
   return (
     <Container>
       <ImageContainer onClick={() => onClickMenu('/')}>
-        <img src={'/images/house_W_1.png'} style={{ width: '30px', height: '30px' }} />
+        <img src={'https://i.ibb.co/xs3Th15/Group-88.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
       <ImageContainer onClick={() => onClickMenu('/challenge')}>
-        <img src={'/images/challenge_W_1.png'} style={{ width: '30px', height: '30px' }} />
+        <img src={'https://i.ibb.co/C9TH7gy/Group-89.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
       <ImageContainer onClick={() => onClickMenu('/feed')}>
-        <img src={'/images/feed_W_1.png'} style={{ width: '30px', height: '30px' }} />
+        <img src={'https://i.ibb.co/rQPFq92/Group-90.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
       <ImageContainer onClick={() => onClickMenu('/rank')}>
-        <img src={'/images/rank_W_1.png'} style={{ width: '30px', height: '30px' }} />
+        <img src={'https://i.ibb.co/cLWKw5p/Group-91.png'} style={{ width: '30px', height: '42px' }} />
       </ImageContainer>
     </Container>
   );

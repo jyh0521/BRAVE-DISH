@@ -7,8 +7,10 @@ export const OverlayRecommendBarBig = () => {
         <>
             <OverlayRecommendBarWrapper>
                 <OverlayRecommendBarText>
-                    <div>총 {reserveCount}건의 수거를 예약했어요</div>
-                    <div>묶음 경로가 필요하면 눌러 주세요</div>
+                    {/*<div>총 {reserveCount}건의 수거를 예약했어요</div>*/}
+                    <div>Total {reserveCount} lifts are reserved</div>
+                    {/*<div>묶음 경로가 필요하면 눌러 주세요</div>*/}
+                    <div>If you want to add a lift click the marker</div>
                 </OverlayRecommendBarText>
             </OverlayRecommendBarWrapper>
         </>
